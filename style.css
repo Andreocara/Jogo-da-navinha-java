@@ -1,5 +1,22 @@
 body{
     overflow-x: hidden;
     overflow-y: hidden;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
+}
+
+.naveJogo{
+    width: 40px;
+    height: 40px;
+    background-image: url("nave_jog.gif");
+    position: absolute;
+}
+
+.telaMensagem{
+    position: absolute;
+    margin-left: -25%;
+    top: 50px;
+    left: 50%;
+    width: 720px;
+    height: 621px;
+    display: none;
 }
