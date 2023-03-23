@@ -1,11 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
-  <title>Jogo de Nave em JavaScript</title>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo da navinha</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script type="text/javascript" src="navinha.js"></script>
 </head>
 <body>
-  <canvas id="canvas"></canvas>
-  <script src="navinha.js"></script>
-</body>
+  <div id="painel">
+    <div id="medidaPlaneta">
+      <div id="barraPlaneta"></div>
+    </div>  
+    <div id="contadorBombas"></div>
+  </div>
+
+  <div id="telaMensagem" class="telaMensagem">
+    <button id="botaoJogar" class="botaoJogar"></button>
+  </div>
+
+  <div id="naveJogo" class="naveJogo"></div>
+  
+  </body>
 </html>
