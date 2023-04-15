@@ -9,8 +9,7 @@ function teclaDw(event) {
     diryJ = -1;
   } else if (tecla == 40) { // baixo
     diryJ = 1;
-  }
-  else if (tecla == 37) { // esquerda
+  } else if (tecla == 37) { // esquerda
     dirxJ = -1;
   } else if (tecla == 39) { // direita
     dirxJ = 1;
@@ -49,12 +48,12 @@ function inicia() {
   pjx = tamTelaW / 2;
   pjy = tamTelaH / 2;
   velj = 5;
-  jog = document.getElementById("naveJ
-  jog.style.top=pjy+"px";
-  jog.style.left=pjx+"px";
+  jog = document.getElementById("naveJogo");
+  jog.style.top = pjy + "px";
+  jog.style.left = pjx + "px";
   gameLoop();
 }
 
-Window.addEventListener("load",inicia)
-document.addEventListener("keydown",teclaDw);
-document.addEventListener("keyup",teclaUp);
+window.addEventListener("load", inicia);
+document.addEventListener("keydown", teclaDw);
+document.addEventListener("keyup", teclaUp);
