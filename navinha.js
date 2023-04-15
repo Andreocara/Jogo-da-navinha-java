@@ -1,4 +1,7 @@
-var diryJ,dirxJ;
+var diryJ,dirxJ,jog,velj,pjx,pjy;
+var tamTelaW,tamTelaH;
+var jogo;
+var frames;
 
 function teclaDw(){
   var tecla=Event.keyCode;
@@ -28,3 +31,35 @@ function teclaUp(){
   }
 
 }
+
+function controlaJogador(){
+  pjy+=diryJ*velj;
+  pjx+=dirxJ*velj;
+  jog.style.top=pjy+"px";
+  jog.style.left=pjx+"px";
+}
+
+
+function gameLoop(){
+  if(jogo){
+    controlaJogador();
+  }
+  frames=requestAnimationFrame(gameLoop);
+}
+
+function inicia(){
+  jogo=false;
+  dirxJ=diryJ=0;
+  tamTelaH=window.innerHeight;
+  tamTelaW=window.innerWidth;
+  pjx=tamTelaW/2;
+  pjy=tamTelaH/2;
+  velj=5;
+  jog=document.getElementById("naveJogo");
+  jog.style.top=pjy+"px";
+  jog.style.left=pjx+"px";
+}
+
+Window.addEventListener("load",inicia)
+document.addEventListener("keydown",teclaDw);
+document.addEventListener("keyup",teclaUp);
